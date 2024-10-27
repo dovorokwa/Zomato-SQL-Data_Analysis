@@ -8,6 +8,7 @@ SELECT *FROM riders
 SELECT *FROM deliveries
 
 --Null values customers
+
 ```sql
 SELECT *FROM CUSTOMERS
 WHERE
