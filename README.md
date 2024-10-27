@@ -7,7 +7,7 @@ SELECT *FROM orders
 SELECT *FROM riders
 SELECT *FROM deliveries
 
-##Null values customers
+--Null values customers
 ```sql
 SELECT *FROM CUSTOMERS
 WHERE
@@ -16,7 +16,8 @@ OR
 CUSTOMER_NAME IS NULL
 OR
 REG_DATE IS NULL
-## Null values Restaurants
+
+--Null values Restaurants
 sql```
 SELECT *FROM RESTAURANTS
 WHERE
@@ -27,7 +28,8 @@ OR
 CITY IS NULL
 OR
 OPENING_HOURS IS NULL
-##Null values orders
+
+--Null values orders
 ```sql
 SELECT *FROM ORDERS
 WHERE
