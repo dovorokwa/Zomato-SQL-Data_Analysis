@@ -3,7 +3,7 @@
 
 --Data exploration
 --Handling null values
-
+``
 SELECT *FROM CUSTOMERS
 WHERE
 CUSTOMER_ID IS NULL
@@ -11,7 +11,7 @@ OR
 CUSTOMER_NAME IS NULL
 OR
 REG_DATE IS NULL
-
+``
 --From restaurants
 SELECT *FROM RESTAURANTS
 WHERE
