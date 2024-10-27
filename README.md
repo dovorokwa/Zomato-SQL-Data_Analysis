@@ -1,6 +1,6 @@
 --Data exploration
 --Handling null values
-```sql
+sql```
 SELECT *FROM customers
 SELECT *FROM restaurants
 SELECT *FROM orders
