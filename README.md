@@ -1,7 +1,7 @@
 --Data exploration
 --Handling null values
 
-```sql
+sql```
 SELECT *FROM customers
 SELECT *FROM restaurants
 SELECT *FROM orders
@@ -10,7 +10,7 @@ SELECT *FROM deliveries
 
 --Null values customers
 
-```sql
+sql```
 SELECT *FROM CUSTOMERS
 WHERE
 CUSTOMER_ID IS NULL
@@ -32,7 +32,7 @@ OR
 OPENING_HOURS IS NULL
 
 --Null values orders
-```sql
+sql```
 SELECT *FROM ORDERS
 WHERE
 ORDER_ID IS NULL
@@ -52,6 +52,7 @@ OR
 TOTAL_AMOUNT IS NULL
 
 --Null values riders
+sql```
 SELECT *FROM RIDERS
 WHERE
 RIDER_ID IS NULL
