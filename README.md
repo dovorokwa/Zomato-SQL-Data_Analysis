@@ -1,3 +1,4 @@
+#Zomato Data Analysis_SQL
 --Data exploration
 --Handling null values
 SELECT *FROM customers
