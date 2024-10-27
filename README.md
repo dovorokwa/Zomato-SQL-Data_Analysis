@@ -1,6 +1,7 @@
 #Data Handling and Exploration
 
 -- Checking for NULL values in Customers
+
 SELECT * FROM CUSTOMERS
 WHERE CUSTOMER_ID IS NULL OR CUSTOMER_NAME IS NULL OR REG_DATE IS NULL;
 
