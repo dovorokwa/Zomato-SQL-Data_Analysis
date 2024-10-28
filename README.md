@@ -79,6 +79,7 @@ RIDER_ID IS NULL
 -----------------------------------------------------
 -- Q.1
 -- Write a query to find the top 5 most frequently ordered dishes by customer called "Arjun Mehta" in the last 1 year.
+sql```
 SELECT *
 FROM -- table name
 	(SELECT 
@@ -99,14 +100,13 @@ FROM -- table name
 	ORDER BY 1, 4 DESC) as t1
 WHERE rank <= 5
 
-
+```sql
 -- 2. Popular Time Slots
 -- Question: Identify the time slots during which the most orders are placed. based on 2-hour intervals.
-
-sql```
 -- 3. Order Value Analysis
 -- Question: Find the average order value per customer who has placed more than 750 orders.
 -- Return customer_name, and aov(average order value)
+sql```
 select 
 c.customer_name, avg(o.total_amount)as Order_value
 from orders as o
@@ -117,6 +117,7 @@ having count(*) >750
 -- 4. High-Value Customers
 -- Question: List the customers who have spent more than 100K in total on food orders.
 -- return customer_name, and customer_id!
+sql```
 select
 c.customer_id, c.customer_name, sum(o.total_amount) as Total_spent
 from customers as c
@@ -124,10 +125,11 @@ join orders as o on c.customer_id =o.customer_id
 group by c.customer_id, c.customer_name
 having sum(o.total_amount)>100000
 order by sum(o.total_amount) desc
+```sql
 -- 5. Orders Without Delivery
 -- Question: Write a query to find orders that were placed but not delivered. 
 -- Return each restuarant name, city and number of not delivered orders 
-
+sql```
 SELECT 
 	r.restaurant_name,
 	COUNT(o.order_id) as cnt_not_delivered_orders
@@ -142,14 +144,14 @@ WHERE d.delivery_id IS NULL
 GROUP BY 1
 ORDER BY 2 DESC
 
-
+```sql
 
 
 -- Q. 6
 -- Restaurant Revenue Ranking: 
 -- Rank restaurants by their total revenue from the last year, including their name, 
 -- total revenue, and rank within their city.
-
+sql```
 WITH ranking_table
 AS
 (
@@ -170,13 +172,13 @@ SELECT
 FROM ranking_table
 WHERE rank = 1
 
-
+```sql
 
 
 -- Q. 7
 -- Most Popular Dish by City: 
 -- Identify the most popular dish in each city based on the number of orders.
-
+sql```
 SELECT * 
 FROM
 (SELECT 
@@ -191,10 +193,10 @@ ON r.restaurant_id = o.restaurant_id
 GROUP BY 1, 2
 ) as t1
 WHERE rank = 1
-
+```sql
 -- Q.8 Customer Churn: 
 -- Find customers who haven’t placed an order in 2024 but did in 2023.
-
+sql```
 SELECT DISTINCT customer_id FROM orders
 WHERE 
 	EXTRACT(YEAR FROM order_date) = 2023
@@ -206,11 +208,11 @@ WHERE
 
 
 
-
+```sql
 -- Q.9 Cancellation Rate Comparison: 
 -- Calculate and compare the order cancellation rate for each restaurant between the 
 -- current year and the previous year.
-
+sql```
 1/4 * 100 
 
 WITH cancel_ratio_23 AS (
@@ -259,10 +261,10 @@ SELECT
 FROM current_year_data AS c
 JOIN last_year_data AS l
 ON c.restaurant_id = l.restaurant_id;
-
+```sql
 -- Q.10 Rider Average Delivery Time: 
 -- Determine each rider's average delivery time.
-
+sql```
 SELECT 
     o.order_id,
     o.order_time,
@@ -277,18 +279,15 @@ JOIN deliveries AS d
 ON o.order_id = d.order_id
 WHERE d.delivery_status = 'Delivered';
 
-
+```sql
 -- Q.11 Monthly Restaurant Growth Ratio: 
 -- Calculate each restaurant's growth ratio based on the total number of delivered orders since its joining
-
+sql```
 last 20
 cm -- 30
 
 cs - ls/ls
 30-20/20 * 100
-
-
-
 
 WITH growth_ratio
 AS
@@ -318,7 +317,7 @@ SELECT
 	,2)
 	as growth_ratio
 FROM growth_ratio;
-
+```sql
 -- Q.12 Customer Segmentation: 
 -- Customer Segmentation: Segment customers into 'Gold' or 'Silver' groups based on their total spending 
 -- compared to the average order value (AOV). If a customer's total spending exceeds the AOV, 
