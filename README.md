@@ -512,7 +512,7 @@ ORDER BY 1, 3 DESC
 
 
 -- Q.20 Rank each city based on the total revenue for last year 2023 
-
+sql```
 SELECT 
 	r.city,
 	SUM(total_amount) as total_revenue,
@@ -522,6 +522,6 @@ JOIN
 restaurants as r
 ON o.restaurant_id = r.restaurant_id
 GROUP BY 1
-
+```sql
 
 -- End of Reports
