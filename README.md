@@ -103,6 +103,7 @@ WHERE rank <= 5
 -- 2. Popular Time Slots
 -- Question: Identify the time slots during which the most orders are placed. based on 2-hour intervals.
 
+sql```
 -- 3. Order Value Analysis
 -- Question: Find the average order value per customer who has placed more than 750 orders.
 -- Return customer_name, and aov(average order value)
@@ -112,6 +113,7 @@ from orders as o
 join customers as c on c.customer_id=o.customer_id
 group by 1
 having count(*) >750
+```sql
 -- 4. High-Value Customers
 -- Question: List the customers who have spent more than 100K in total on food orders.
 -- return customer_name, and customer_id!
