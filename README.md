@@ -3,7 +3,7 @@
 
 --Null values customers
 
-
+```sql
 SELECT *FROM CUSTOMERS
 WHERE
 CUSTOMER_ID IS NULL
