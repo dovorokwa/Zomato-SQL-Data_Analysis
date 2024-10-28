@@ -1,5 +1,5 @@
---Data exploration
---Handling null values
+#Data exploration
+##Handling null values
 
 sql```
 SELECT *FROM customers
@@ -8,6 +8,7 @@ SELECT *FROM orders
 SELECT *FROM riders
 SELECT *FROM deliveries
 ```sql
+
 --Null values customers
 
 sql```
