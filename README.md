@@ -51,7 +51,7 @@ OR
 ORDER_STATUS IS NULL
 OR
 TOTAL_AMOUNT IS NULL
-
+```sql
 --Null values riders
 sql```
 SELECT *FROM RIDERS
@@ -60,8 +60,9 @@ RIDER_ID IS NULL
 OR
 RIDER_NAME IS NULL
 OR
-SIGN_UP IS NULL
-
+SIGN_UP IS NUL
+```sql
+--Null values feom deliveries
 sql```
 SELECT COUNT(*) FROM DELIVERIES
 WHERE
