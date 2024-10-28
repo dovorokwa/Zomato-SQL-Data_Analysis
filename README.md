@@ -3,7 +3,7 @@
 
 --Null values customers
 
-sql```
+
 SELECT *FROM CUSTOMERS
 WHERE
 CUSTOMER_ID IS NULL
@@ -11,9 +11,9 @@ OR
 CUSTOMER_NAME IS NULL
 OR
 REG_DATE IS NULL
-```sql
+
 --Null values Restaurants
-sql```
+
 SELECT *FROM RESTAURANTS
 WHERE
 RESTAURANT_ID IS NULL
