@@ -1,13 +1,13 @@
 --Data exploration
 --Handling null values
 
-```sql
+sql```
 SELECT *FROM customers
 SELECT *FROM restaurants
 SELECT *FROM orders
 SELECT *FROM riders
 SELECT *FROM deliveries
-
+```sql
 --Null values customers
 
 sql```
@@ -18,7 +18,7 @@ OR
 CUSTOMER_NAME IS NULL
 OR
 REG_DATE IS NULL
-
+```sql
 --Null values Restaurants
 sql```
 SELECT *FROM RESTAURANTS
@@ -30,7 +30,7 @@ OR
 CITY IS NULL
 OR
 OPENING_HOURS IS NULL
-
+```sql
 --Null values orders
 sql```
 SELECT *FROM ORDERS
@@ -73,7 +73,7 @@ OR
 DELIVERY_TIME IS NULL
 OR
 RIDER_ID IS NULL
-
+```sql
 -----------------------------------------------------
 --Analysis and reports
 -----------------------------------------------------
