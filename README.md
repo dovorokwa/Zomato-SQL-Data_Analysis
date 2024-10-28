@@ -487,7 +487,7 @@ FROM riders_time
 
 -- Q.19 Order Item Popularity: 
 -- Track the popularity of specific order items over time and identify seasonal demand spikes.
-
+sql```
 SELECT 
 	order_item,
 	seasons,
@@ -508,7 +508,7 @@ SELECT
 GROUP BY 1, 2
 ORDER BY 1, 3 DESC
 
-
+```sql
 
 
 -- Q.20 Rank each city based on the total revenue for last year 2023 
